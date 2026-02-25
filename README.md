@@ -7,6 +7,10 @@ Instead of repeating manual steps, everything is scripted and reproducible.
 
 If you need deterministic terminal demos for talks or training sessions, this may help.
 
+<p align="center">
+  <img src="examples/module_avail_o.gif" alt="Demo" />
+</p>
+
 ---
 
 ## ✨ Features
