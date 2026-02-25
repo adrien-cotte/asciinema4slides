@@ -79,6 +79,48 @@ to override defaults such as:
 
 ---
 
+## ⚠️ Limitations
+
+### Argument rendering (`%q` behavior)
+
+Commands wrapped with the `ASCIINEMA` helper are printed using `printf %q` to ensure safe and reproducible shell escaping.
+
+As a consequence, the displayed command may not exactly match the original user input.
+
+For example:
+
+```bash
+echo "Hello world!"
+```
+
+may be rendered as:
+
+```bash
+echo Hello\ world\!
+```
+
+and:
+
+```bash
+module avail -o ""
+```
+
+may appear as:
+
+```bash
+module avail -o ''
+```
+
+This is expected behavior.
+
+`%q` does not preserve the original quoting style — it generates a shell-escaped representation that is functionally equivalent and safe to re-execute.
+
+The executed command remains identical; only its visual representation may differ.
+
+If exact quote preservation is required, a different rendering strategy (e.g., raw string execution) would be necessary, with potential trade-offs in safety and reproducibility.
+
+---
+
 ## 🤝 Acknowledgments
 
 This project originates from an idea by **@Billae**, who also helped shape the design and overall approach.  
