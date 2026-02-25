@@ -26,7 +26,7 @@ ASCIINEMA() {
     # Wait between each character to simulate human
     cmd=""
     for arg in "$@"; do
-        cmd+="$(printf '%s' "$arg") "
+        cmd+="$(printf '%q' "$arg") "
     done
 
     for (( i=0; i<${#cmd}; i++ )); do
