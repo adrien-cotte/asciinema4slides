@@ -8,11 +8,6 @@ source $(dirname $BASH_SOURCE[0])/user-config.sh
 
 __prompt() {
 
-    # Fake prompt
-    # printf '\033[1;32m[user@demo]\033[0m:'
-    # printf '\033[1;34m~\033[0m'
-    # printf '\033[1m$\033[0m '
-
     # User prompt
     printf '%b' "${ASCIINEMA_PS1@P}"
 }
