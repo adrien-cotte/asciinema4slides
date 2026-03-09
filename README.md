@@ -24,6 +24,39 @@ If you need deterministic terminal demos for talks or training sessions, this ma
 
 ---
 
+## Workflow
+
+```text
+Scripted demo commands
+        |
+        v
++------------------------+
+| asciinema4slides.sh    |
++------------------------+
+        |
+        v
+     demo.cast
+        |
+        v
++------------------------+
+| cast2gif.sh            |
++------------------------+
+        |
+        v
+      demo.gif
+        |
+        +--------------------+
+                             v
+                  +------------------------+
+                  | gif2mp4.sh (Optional)  |
+                  +------------------------+
+                             |
+                             v
+                          demo.mp4
+```
+
+---
+
 ## 📦 Requirements
 
 - `asciinema` ≥ 2.4
