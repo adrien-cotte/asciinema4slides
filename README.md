@@ -2,7 +2,7 @@
 
 A small toolkit to automate and script `asciinema` recordings tailored for slide decks.
 
-This project was created to generate a large number of consistent demo videos aligned with a presentation template (font size, colors, timing, aspect ratio).  
+This project was created to generate a large number of consistent demo videos aligned with a presentation template (font size, colors, timing, aspect ratio).
 Instead of repeating manual steps, everything is scripted and reproducible.
 
 If you need deterministic terminal demos for talks or training sessions, this may help.
@@ -99,8 +99,18 @@ ASCIINEMA echo Hello
 
 The generated GIF matches your configured:
 
-- font size  
-- rows / columns  
+- font size
+- rows / columns
+
+---
+
+### 4️⃣ (Optional) Convert the GIF to MP4
+
+Some presentation tools allow pausing videos more easily than GIF animations.
+
+```bash
+./scripts/gif2mp4.sh demo.gif
+```
 
 ---
 
@@ -118,15 +128,6 @@ to override defaults such as:
 - prompt
 - typing speed
 - row/col ratio
-
----
-
-### 4️⃣ (Optional) Convert the GIF to MP4
-
-Some presentation tools allow pausing videos more easily than GIF animations.
-
-```bash
-./scripts/gif2mp4.sh demo.gif
 
 ---
 
@@ -174,5 +175,5 @@ If exact quote preservation is required, a different rendering strategy (e.g., r
 
 ## 🤝 Acknowledgments
 
-This project originates from an idea by **@Billae**, who also helped shape the design and overall approach.  
+This project originates from an idea by **@Billae**, who also helped shape the design and overall approach.
 Many thanks for the initial inspiration and feedback during development.
