@@ -20,14 +20,19 @@ If you need deterministic terminal demos for talks or training sessions, this ma
 - Slide-friendly dimensions (16:9 ready)
 - Controlled timing (idle limits, typing effect)
 - One-command cast → GIF conversion via `agg`
+    - And GIF → MP4 via `ffmpeg`
 
 ---
 
 ## 📦 Requirements
 
-- `asciinema` ≥ 2.4  
-- `agg` ≥ 1.6  
+- `asciinema` ≥ 2.4
+- `agg` ≥ 1.6
 - `bash`
+
+Optional:
+
+- `ffmpeg` (for GIF → MP4 conversion)
 
 ---
 
@@ -80,6 +85,15 @@ to override defaults such as:
 - prompt
 - typing speed
 - row/col ratio
+
+---
+
+### 4️⃣ (Optional) Convert the GIF to MP4
+
+Some presentation tools allow pausing videos more easily than GIF animations.
+
+```bash
+./scripts/gif2mp4.sh demo.gif
 
 ---
 
