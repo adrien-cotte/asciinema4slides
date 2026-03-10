@@ -171,6 +171,19 @@ The executed command remains identical; only its visual representation may diffe
 
 If exact quote preservation is required, a different rendering strategy (e.g., raw string execution) would be necessary, with potential trade-offs in safety and reproducibility.
 
+### Comments in demo scripts
+
+Because `#` is interpreted by the shell before function calls,
+comments cannot be captured by the `ASCIINEMA` helper.
+
+To display comments in demos, use the following pattern:
+
+```bash
+echo 'command args # comment'
+__prompt
+command args
+```
+
 ---
 
 ## 🤝 Acknowledgments
