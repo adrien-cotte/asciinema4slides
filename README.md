@@ -157,6 +157,31 @@ This is useful to simulate long-running commands or truncate large outputs in de
 
 ---
 
+## 🧪 Experimental
+
+An experimental all-in-one wrapper can chain the full workflow:
+
+```text
+demo.sh -> demo.cast -> demo.gif -> demo.mp4
+```
+
+Example:
+
+```bash
+./scripts/all-in-one.sh demo.sh
+```
+
+To allow overwriting existing files:
+
+```bash
+./scripts/all-in-one.sh --force demo.sh
+```
+
+This helper is convenient, but more fragile than running each step explicitly.
+Use it with care, especially when output files already exist.
+
+---
+
 ## ⚠️ Limitations
 
 ### Argument rendering (`%q` behavior)
