@@ -131,6 +131,32 @@ to override defaults such as:
 
 ---
 
+## Skipping command execution
+
+In some cases you may want to **display a command being typed without actually executing it**,
+for example to shorten long outputs or show only a portion of a command result.
+
+This can be done using the `ASCIINEMA_DRY_RUN` variable.
+
+Example:
+
+```bash
+ASCIINEMA_DRY_RUN=1 ASCIINEMA find /usr/lib
+find /usr/lib | head -n 5
+echo "....."
+find /usr/lib | tail -n 5
+```
+
+In this case:
+
+- the command is **typed and displayed** in the recording
+- but it is **not executed**
+- allowing you to manually control the visible output
+
+This is useful to simulate long-running commands or truncate large outputs in demos.
+
+---
+
 ## ⚠️ Limitations
 
 ### Argument rendering (`%q` behavior)

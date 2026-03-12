@@ -34,9 +34,10 @@ ASCIINEMA() {
     printf '\n'
 
     # Run command
-    "$@"
-
-    __prompt
+    if [[ "$ASCIINEMA_DRY_RUN" == "0" ]]; then
+        "$@"
+        __prompt
+    fi
 }
 
 # Display the first prompt
