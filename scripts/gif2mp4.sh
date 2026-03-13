@@ -19,7 +19,7 @@ output="${1//.gif/.mp4}"
 ffmpeg -i $input \
     -movflags faststart \
     -pix_fmt yuv420p \
-    -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" \
+    -vf "fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2" \
     ${FFMPEG_EXTRA_OPTS} \
     $output
 
